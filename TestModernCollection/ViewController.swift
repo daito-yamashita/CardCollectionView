@@ -29,5 +29,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return collectionViewCell
     }
+    
 }
 
