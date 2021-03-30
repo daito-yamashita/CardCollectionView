@@ -22,13 +22,25 @@ class ViewController: UIViewController {
         configureDataSource()
     }
 
+    // 基本の流れは、
+    // item
+    // group
+    // section
+    // layout
     func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        // itemの間に空白を入れる
+        item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+        
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2), heightDimension: .fractionalHeight(1.0))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
+        // 縦横にスクロールするCollectionViewを作成
+        section.orthogonalScrollingBehavior = .groupPaging
+        
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
