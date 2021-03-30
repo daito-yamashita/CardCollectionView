@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711FA9DA2612E0180018FF09 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711FA9D92612E0180018FF09 /* TextCell.swift */; };
 		71CF65A22611A78A0085FE29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF65A12611A78A0085FE29 /* AppDelegate.swift */; };
 		71CF65A42611A78A0085FE29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF65A32611A78A0085FE29 /* SceneDelegate.swift */; };
 		71CF65A62611A78A0085FE29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF65A52611A78A0085FE29 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711FA9D92612E0180018FF09 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		71CF659E2611A78A0085FE29 /* TrainingCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CF65A12611A78A0085FE29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CF65A32611A78A0085FE29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				71CF65A12611A78A0085FE29 /* AppDelegate.swift */,
 				71CF65A32611A78A0085FE29 /* SceneDelegate.swift */,
 				71CF65A52611A78A0085FE29 /* ViewController.swift */,
+				711FA9D92612E0180018FF09 /* TextCell.swift */,
 				71CF65A72611A78A0085FE29 /* Main.storyboard */,
 				71CF65AA2611A78B0085FE29 /* Assets.xcassets */,
 				71CF65AC2611A78B0085FE29 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				71CF65A62611A78A0085FE29 /* ViewController.swift in Sources */,
 				71CF65A22611A78A0085FE29 /* AppDelegate.swift in Sources */,
+				711FA9DA2612E0180018FF09 /* TextCell.swift in Sources */,
 				71CF65A42611A78A0085FE29 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
