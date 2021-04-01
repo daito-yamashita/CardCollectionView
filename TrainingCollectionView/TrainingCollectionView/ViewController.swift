@@ -57,8 +57,8 @@ class ViewController: UIViewController {
             cell.nameLabel.text = card.name
             cell.costLabel.text = card.cost
             cell.effectLabel.text = card.effect
-            cell.attackLabel?.text = card.attack
-            cell.defenseLabel?.text = card.defense
+            cell.attackLabel.text = card.attack
+            cell.defenseLabel.text = card.defense
             cell.backgroundColor = .systemBackground
         }
         

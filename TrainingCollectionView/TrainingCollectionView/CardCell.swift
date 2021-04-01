@@ -13,8 +13,8 @@ class CardCell: UICollectionViewCell {
     let costLabel = UILabel()
     let nameLabel = UILabel()
     let effectLabel = UILabel()
-    let attackLabel = UILabel() as Optional
-    let defenseLabel = UILabel() as Optional
+    let attackLabel = UILabel()
+    let defenseLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,15 +33,15 @@ class CardCell: UICollectionViewCell {
         costLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         effectLabel.translatesAutoresizingMaskIntoConstraints = false
-        attackLabel?.translatesAutoresizingMaskIntoConstraints = false
-        defenseLabel?.translatesAutoresizingMaskIntoConstraints = false
+        attackLabel.translatesAutoresizingMaskIntoConstraints = false
+        defenseLabel.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(imageView)
         contentView.addSubview(costLabel)
         contentView.addSubview(nameLabel)
         contentView.addSubview(effectLabel)
-        contentView.addSubview(attackLabel!)
-        contentView.addSubview(defenseLabel!)
+        contentView.addSubview(attackLabel)
+        contentView.addSubview(defenseLabel)
         
         costLabel.layer.borderColor = UIColor.black.cgColor
         costLabel.layer.borderWidth = 1
@@ -69,20 +69,20 @@ class CardCell: UICollectionViewCell {
         effectLabel.textColor = .black
         effectLabel.backgroundColor = UIColor.gray
 
-        attackLabel?.backgroundColor = UIColor.red
-        attackLabel?.layer.borderColor = UIColor.black.cgColor
-        attackLabel?.layer.borderWidth = 1
-        attackLabel?.layer.cornerRadius = height/20
-        attackLabel?.textAlignment = .center
-        attackLabel?.textColor = .black
+        attackLabel.backgroundColor = UIColor.red
+        attackLabel.layer.borderColor = UIColor.black.cgColor
+        attackLabel.layer.borderWidth = 1
+        attackLabel.layer.cornerRadius = height/20
+        attackLabel.textAlignment = .center
+        attackLabel.textColor = .black
 
 
-        defenseLabel?.layer.borderColor = UIColor.black.cgColor
-        defenseLabel?.layer.borderWidth = 1
-        defenseLabel?.layer.cornerRadius = height/20
-        defenseLabel?.textAlignment = .center
-        defenseLabel?.textColor = .black
-        defenseLabel?.backgroundColor = UIColor.blue
+        defenseLabel.layer.borderColor = UIColor.black.cgColor
+        defenseLabel.layer.borderWidth = 1
+        defenseLabel.layer.cornerRadius = height/20
+        defenseLabel.textAlignment = .center
+        defenseLabel.textColor = .black
+        defenseLabel.backgroundColor = UIColor.blue
         
         NSLayoutConstraint.activate([
             costLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -108,15 +108,15 @@ class CardCell: UICollectionViewCell {
             effectLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             effectLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
                         
-            attackLabel!.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            attackLabel!.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            attackLabel!.widthAnchor.constraint(equalToConstant: height/10),
-            attackLabel!.heightAnchor.constraint(equalToConstant: height/10),
+            attackLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            attackLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            attackLabel.widthAnchor.constraint(equalToConstant: height/10),
+            attackLabel.heightAnchor.constraint(equalToConstant: height/10),
             
-            defenseLabel!.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            defenseLabel!.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            defenseLabel!.widthAnchor.constraint(equalToConstant: height/10),
-            defenseLabel!.heightAnchor.constraint(equalToConstant: height/10)
+            defenseLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            defenseLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            defenseLabel.widthAnchor.constraint(equalToConstant: height/10),
+            defenseLabel.heightAnchor.constraint(equalToConstant: height/10)
         ])
         
     }
