@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CardViewController.swift
 //  TrainingCollectionView
 //
 //  Created by daito yamashita on 2021/03/29.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CardViewController: UIViewController {
 
     enum Section {
         case main
@@ -16,11 +16,13 @@ class ViewController: UIViewController {
     let cardsController = CardController()
     var dataSource: UICollectionViewDiffableDataSource<Section, CardController.Card>!
     var collectionView: UICollectionView!
+    let searchBar = UISearchBar(frame: .zero)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureHierarchy()
         configureDataSource()
+        performQuery(with: nil)
     }
 
     // 基本の流れは、
@@ -47,9 +49,14 @@ class ViewController: UIViewController {
     
     func configureHierarchy() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .systemBackground
         view.addSubview(collectionView)
+        view.addSubview(searchBar)
+        
+        searchBar.delegate = self
     }
     
     func configureDataSource() {
@@ -72,12 +79,21 @@ class ViewController: UIViewController {
             (collectionView: UICollectionView, indexPath: IndexPath, card: CardController.Card) -> UICollectionViewCell? in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: card)
         }
+    }
+    
+    func performQuery(with filter: String?) {
+        let cards = cardsController.filteredCards(with: filter).sorted { $0.name < $1.name }
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, CardController.Card>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(cardsController.collections)
+        snapshot.appendItems(cards)
         dataSource.apply(snapshot, animatingDifferences: false)
-    
+    }
+}
+
+extension CardViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        performQuery(with: searchText)
     }
 }
 

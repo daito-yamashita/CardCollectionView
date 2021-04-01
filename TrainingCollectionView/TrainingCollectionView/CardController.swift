@@ -25,6 +25,15 @@ class CardController {
         func hash(into hasher: inout Hasher) {
             hasher.combine(identifier)
         }
+        static func == (lhs: Card, rhs: Card) -> Bool {
+            return lhs.identifier == rhs.identifier
+        }
+        func contains(_ filter: String?) -> Bool {
+            guard let filterText = filter else { return true }
+            if filterText.isEmpty { return true }
+            let lowercasedFilter = filterText.lowercased()
+            return name.lowercased().contains(lowercasedFilter)
+        }
     }
     
     var collections: [Card] {
@@ -33,6 +42,16 @@ class CardController {
     
     init() {
         generateCollections()
+    }
+    
+    func filteredCards(with filter: String? = nil, limit: Int? = nil) -> [Card] {
+        let filtered =  _collections.filter { $0.contains(filter)}
+        if let limit = limit {
+            return Array(filtered.prefix(through: limit))
+        } else {
+            return filtered
+        }
+        
     }
     
     fileprivate var _collections = [Card]()
