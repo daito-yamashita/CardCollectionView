@@ -99,7 +99,6 @@ class CardCell: UICollectionViewCell {
             nameLabel.leadingAnchor.constraint(equalTo: costLabel.trailingAnchor, constant: spacing),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             nameLabel.heightAnchor.constraint(equalTo: costLabel.heightAnchor),
-
             
             imageView.topAnchor.constraint(equalTo: costLabel.bottomAnchor, constant: spacing),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),

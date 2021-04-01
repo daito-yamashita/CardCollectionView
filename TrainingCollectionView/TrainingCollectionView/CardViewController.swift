@@ -88,6 +88,7 @@ class CardViewController: UIViewController {
         let cellRegistration = UICollectionView.CellRegistration<CardCell, CardController.Card> { (cell, indexPath, card) in
             cell.nameLabel.text = card.name
             cell.costLabel.text = card.cost
+            cell.imageView.image = card.image
             cell.effectLabel.text = card.effect
             cell.attackLabel.text = card.attack
             cell.defenseLabel.text = card.defense
