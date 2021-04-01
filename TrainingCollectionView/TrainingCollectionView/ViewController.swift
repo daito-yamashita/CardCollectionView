@@ -60,6 +60,12 @@ class ViewController: UIViewController {
             cell.attackLabel.text = card.attack
             cell.defenseLabel.text = card.defense
             cell.backgroundColor = .systemBackground
+            if cell.attackLabel.text == "" {
+                cell.attackLabel.isHidden = true
+            }
+            if cell.defenseLabel.text == "" {
+                cell.defenseLabel.isHidden = true
+            }
         }
         
         dataSource = UICollectionViewDiffableDataSource<Section, CardController.Card>(collectionView: collectionView) {
