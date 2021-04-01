@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		711FA9DA2612E0180018FF09 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711FA9D92612E0180018FF09 /* TextCell.swift */; };
+		711FA9DD2612E4AF0018FF09 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711FA9DC2612E4AF0018FF09 /* CardCell.swift */; };
+		711FA9E02612E5C10018FF09 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711FA9DF2612E5C10018FF09 /* CardController.swift */; };
 		71CF65A22611A78A0085FE29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF65A12611A78A0085FE29 /* AppDelegate.swift */; };
 		71CF65A42611A78A0085FE29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF65A32611A78A0085FE29 /* SceneDelegate.swift */; };
 		71CF65A62611A78A0085FE29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF65A52611A78A0085FE29 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		711FA9D92612E0180018FF09 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		711FA9DC2612E4AF0018FF09 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		711FA9DF2612E5C10018FF09 /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
 		71CF659E2611A78A0085FE29 /* TrainingCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CF65A12611A78A0085FE29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CF65A32611A78A0085FE29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				71CF65A12611A78A0085FE29 /* AppDelegate.swift */,
 				71CF65A32611A78A0085FE29 /* SceneDelegate.swift */,
 				71CF65A52611A78A0085FE29 /* ViewController.swift */,
+				711FA9DC2612E4AF0018FF09 /* CardCell.swift */,
+				711FA9DF2612E5C10018FF09 /* CardController.swift */,
 				711FA9D92612E0180018FF09 /* TextCell.swift */,
 				71CF65A72611A78A0085FE29 /* Main.storyboard */,
 				71CF65AA2611A78B0085FE29 /* Assets.xcassets */,
@@ -140,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711FA9DD2612E4AF0018FF09 /* CardCell.swift in Sources */,
+				711FA9E02612E5C10018FF09 /* CardController.swift in Sources */,
 				71CF65A62611A78A0085FE29 /* ViewController.swift in Sources */,
 				71CF65A22611A78A0085FE29 /* AppDelegate.swift in Sources */,
 				711FA9DA2612E0180018FF09 /* TextCell.swift in Sources */,
@@ -291,13 +299,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PTUKDUTHP4;
+				DEVELOPMENT_TEAM = DU29U35ZKE;
 				INFOPLIST_FILE = TrainingCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "daito-yamashita.TrainingCollectionView";
+				PRODUCT_BUNDLE_IDENTIFIER = "Style2-Natural.TrainingCollectionView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,13 +318,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PTUKDUTHP4;
+				DEVELOPMENT_TEAM = DU29U35ZKE;
 				INFOPLIST_FILE = TrainingCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "daito-yamashita.TrainingCollectionView";
+				PRODUCT_BUNDLE_IDENTIFIER = "Style2-Natural.TrainingCollectionView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

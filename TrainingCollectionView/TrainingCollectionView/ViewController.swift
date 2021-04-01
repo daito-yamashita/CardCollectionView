@@ -12,8 +12,9 @@ class ViewController: UIViewController {
     enum Section {
         case main
     }
-    
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
+
+    let cardsController = CardController()
+    var dataSource: UICollectionViewDiffableDataSource<Section, CardController.Card>!
     var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -52,25 +53,25 @@ class ViewController: UIViewController {
     }
     
     func configureDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<TextCell, Int> { (cell, indexPath, identifier) in
-            cell.label.text = "\(identifier)"
-            cell.contentView.backgroundColor = .systemBackground
-            cell.layer.borderColor = UIColor.black.cgColor
-            cell.layer.borderWidth = 1
-            cell.label.textAlignment = .center
-            cell.label.font = UIFont.preferredFont(forTextStyle: .title1)
+        let cellRegistration = UICollectionView.CellRegistration<CardCell, CardController.Card> { (cell, indexPath, card) in
+            cell.nameLabel.text = card.name
+            cell.costLabel.text = card.cost
+            cell.effectLabel.text = card.effect
+            cell.attackLabel?.text = card.attack
+            cell.defenseLabel?.text = card.defense
+            cell.backgroundColor = .systemBackground
         }
         
-        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
-            (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
-            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
+        dataSource = UICollectionViewDiffableDataSource<Section, CardController.Card>(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, card: CardController.Card) -> UICollectionViewCell? in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: card)
         }
         
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, CardController.Card>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(Array(0..<20))
+        snapshot.appendItems(cardsController.collections)
         dataSource.apply(snapshot, animatingDifferences: false)
-        
+    
     }
 }
 
