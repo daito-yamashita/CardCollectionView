@@ -56,6 +56,31 @@ class CardViewController: UIViewController {
         view.addSubview(collectionView)
         view.addSubview(searchBar)
         
+        let views = ["cv": collectionView!, "searchBar": searchBar] as [String : Any]
+        var constraints = [NSLayoutConstraint]()
+        constraints.append(contentsOf: NSLayoutConstraint.constraints(
+                            withVisualFormat: "H:|[cv]|",
+                            options: [],
+                            metrics: nil,
+                            views: views)
+        )
+        constraints.append(contentsOf: NSLayoutConstraint.constraints(
+                            withVisualFormat: "H:|[searchBar]|",
+                            options: [],
+                            metrics: nil,
+                            views: views)
+        )
+        constraints.append(contentsOf: NSLayoutConstraint.constraints(
+                            withVisualFormat: "V:|-20-[cv]-20-[searchBar]-20-|",
+                            options: [],
+                            metrics: nil,
+                            views: views)
+        )
+        constraints.append(searchBar.bottomAnchor.constraint(
+                            equalToSystemSpacingBelow: view.safeAreaLayoutGuide.bottomAnchor,
+                            multiplier: 1.0))
+        NSLayoutConstraint.activate(constraints)
+        
         searchBar.delegate = self
     }
     
@@ -75,6 +100,8 @@ class CardViewController: UIViewController {
             }
         }
         
+
+        
         dataSource = UICollectionViewDiffableDataSource<Section, CardController.Card>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, card: CardController.Card) -> UICollectionViewCell? in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: card)
@@ -82,12 +109,12 @@ class CardViewController: UIViewController {
     }
     
     func performQuery(with filter: String?) {
-        let cards = cardsController.filteredCards(with: filter).sorted { $0.name < $1.name }
+        let cards = cardsController.filteredCards(with: filter).sorted { $0.cost < $1.cost }
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, CardController.Card>()
         snapshot.appendSections([.main])
         snapshot.appendItems(cards)
-        dataSource.apply(snapshot, animatingDifferences: false)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
 }
 
