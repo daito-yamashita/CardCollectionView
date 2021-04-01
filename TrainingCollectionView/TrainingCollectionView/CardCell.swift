@@ -49,6 +49,7 @@ class CardCell: UICollectionViewCell {
         costLabel.textAlignment = .center
         costLabel.textColor = .black
         costLabel.backgroundColor = UIColor.orange
+        costLabel.layer.masksToBounds = true
         
         nameLabel.layer.borderColor = UIColor.black.cgColor
         nameLabel.layer.borderWidth = 1
@@ -56,11 +57,13 @@ class CardCell: UICollectionViewCell {
         nameLabel.textAlignment = .center
         nameLabel.textColor = .black
         nameLabel.backgroundColor = UIColor.yellow
+        nameLabel.layer.masksToBounds = true
   
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.layer.borderWidth = 1
         imageView.layer.cornerRadius = 4
         imageView.backgroundColor = UIColor.green
+        imageView.layer.masksToBounds = true
         
         effectLabel.layer.borderColor = UIColor.black.cgColor
         effectLabel.layer.borderWidth = 1
@@ -68,14 +71,15 @@ class CardCell: UICollectionViewCell {
         effectLabel.textAlignment = .center
         effectLabel.textColor = .black
         effectLabel.backgroundColor = UIColor.gray
+        effectLabel.layer.masksToBounds = true
 
-        attackLabel.backgroundColor = UIColor.red
         attackLabel.layer.borderColor = UIColor.black.cgColor
         attackLabel.layer.borderWidth = 1
         attackLabel.layer.cornerRadius = height/20
         attackLabel.textAlignment = .center
         attackLabel.textColor = .black
-
+        attackLabel.backgroundColor = UIColor.red
+        attackLabel.layer.masksToBounds = true
 
         defenseLabel.layer.borderColor = UIColor.black.cgColor
         defenseLabel.layer.borderWidth = 1
@@ -83,6 +87,7 @@ class CardCell: UICollectionViewCell {
         defenseLabel.textAlignment = .center
         defenseLabel.textColor = .black
         defenseLabel.backgroundColor = UIColor.blue
+        defenseLabel.layer.masksToBounds = true
         
         NSLayoutConstraint.activate([
             costLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
