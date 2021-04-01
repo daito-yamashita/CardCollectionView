@@ -59,29 +59,29 @@ class CardController {
     
     func generateCollections() {
         _collections = [
-            Card(cost: "0", name: "test1", image: UIImage(named: "Elephant"), effect: "test1 effect", attack: "1", defense: "1", type: CardType.monster),
+            Card(cost: "10", name: "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト", image: UIImage(named: "Elephant"), effect: "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト", attack: "10", defense: "10", type: CardType.monster),
             
             Card(cost: "1", name: "test2", image: UIImage(named: "Elephant"), effect: "test2 effect", attack: "1", defense: "3", type: CardType.monster),
             Card(cost: "1", name: "test3", image: UIImage(named: "Elephant"), effect: "test3 effect", attack: "2", defense: "1", type: CardType.monster),
             Card(cost: "1", name: "test4", image: UIImage(named: "Elephant"), effect: "test4 effect", attack: "0", defense: "2", type: CardType.monster),
-            Card(cost: "1", name: "test5", image: UIImage(named: "Elephant"), effect: "test5 effect", attack: "", defense: "", type: CardType.spell),
+            Card(cost: "1", name: "test5", image: UIImage(named: "spell1"), effect: "test5 effect", attack: "", defense: "", type: CardType.spell),
 
             Card(cost: "2", name: "test6", image: UIImage(named: "Elephant"), effect: "test6 effect", attack: "3", defense: "2", type: CardType.monster),
             Card(cost: "2", name: "test7", image: UIImage(named: "Elephant"), effect: "test7 effect", attack: "2", defense: "3", type: CardType.monster),
             Card(cost: "2", name: "test8", image: UIImage(named: "Elephant"), effect: "test8 effect", attack: "4", defense: "1", type: CardType.monster),
-            Card(cost: "2", name: "test9", image: UIImage(named: "Elephant"), effect: "test9 effect", attack: "", defense: "", type: CardType.spell),
-            Card(cost: "2", name: "test10", image: UIImage(named: "Elephant"), effect: "test10 effect", attack: "", defense: "", type: CardType.spell),
+            Card(cost: "2", name: "test9", image: UIImage(named: "spell2"), effect: "test9 effect", attack: "", defense: "", type: CardType.spell),
+            Card(cost: "2", name: "test10", image: UIImage(named: "spell3"), effect: "test10 effect", attack: "", defense: "", type: CardType.spell),
 
             Card(cost: "3", name: "test11", image: UIImage(named: "Elephant"), effect: "test11 effect", attack: "3", defense: "4", type: CardType.monster),
             Card(cost: "3", name: "test12", image: UIImage(named: "Elephant"), effect: "test12 effect", attack: "4", defense: "3", type: CardType.monster),
-            Card(cost: "3", name: "test13", image: UIImage(named: "Elephant"), effect: "test13 effect", attack: "", defense: "", type: CardType.spell),
+            Card(cost: "3", name: "test13", image: UIImage(named: "spell4"), effect: "test13 effect", attack: "", defense: "", type: CardType.spell),
             
             Card(cost: "4", name: "test14", image: UIImage(named: "Elephant"), effect: "test14 effect", attack: "3", defense: "6", type: CardType.monster),
-            Card(cost: "4", name: "test15", image: UIImage(named: "Elephant"), effect: "test15 effect", attack: "", defense: "", type: CardType.spell),
-            Card(cost: "4", name: "test16", image: UIImage(named: "Elephant"), effect: "test16 effect", attack: "", defense: "", type: CardType.spell),
+            Card(cost: "4", name: "test15", image: UIImage(named: "spell5"), effect: "test15 effect", attack: "", defense: "", type: CardType.spell),
+            Card(cost: "4", name: "test16", image: UIImage(named: "spell6"), effect: "test16 effect", attack: "", defense: "", type: CardType.spell),
             
-            Card(cost: "5", name: "test17", image: UIImage(named: "Elephant"), effect: "test17 effect", attack: "", defense: "", type: CardType.spell),
-            Card(cost: "5", name: "test18", image: UIImage(named: "Elephant"), effect: "test18 effect", attack: "", defense: "", type: CardType.spell),
+            Card(cost: "5", name: "test17", image: UIImage(named: "spell7"), effect: "test17 effect", attack: "", defense: "", type: CardType.spell),
+            Card(cost: "5", name: "test18", image: UIImage(named: "spell8"), effect: "test18 effect", attack: "", defense: "", type: CardType.spell),
             
             Card(cost: "6", name: "test19", image: UIImage(named: "Elephant"), effect: "test19 effect", attack: "5", defense: "6", type: CardType.monster),
             Card(cost: "6", name: "test20", image: UIImage(named: "Elephant"), effect: "test20 effect", attack: "4", defense: "7", type: CardType.monster),

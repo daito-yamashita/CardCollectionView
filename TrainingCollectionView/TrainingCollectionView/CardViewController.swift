@@ -110,7 +110,7 @@ class CardViewController: UIViewController {
     }
     
     func performQuery(with filter: String?) {
-        let cards = cardsController.filteredCards(with: filter).sorted { $0.cost < $1.cost }
+        let cards = cardsController.filteredCards(with: filter).sorted { Int($0.cost)! < Int($1.cost)! }
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, CardController.Card>()
         snapshot.appendSections([.main])
