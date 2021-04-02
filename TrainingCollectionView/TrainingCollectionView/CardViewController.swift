@@ -64,8 +64,10 @@ class CardViewController: UIViewController {
                             metrics: nil,
                             views: views)
         )
+        // searchBarのH方向の位置を変更
+        // 今は適当に400という値を入れている
         constraints.append(contentsOf: NSLayoutConstraint.constraints(
-                            withVisualFormat: "H:|[searchBar]|",
+                            withVisualFormat: "H:|-400-[searchBar]|",
                             options: [],
                             metrics: nil,
                             views: views)
