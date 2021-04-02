@@ -46,7 +46,7 @@ class CardController {
     }
     
     func filteredCards(with filter: String? = nil, limit: Int? = nil) -> [Card] {
-        let filtered =  _collections.filter { $0.contains(filter)}
+        let filtered =  _collections.filter { $0.contains(filter) }
         if let limit = limit {
             return Array(filtered.prefix(through: limit))
         } else {
@@ -57,9 +57,10 @@ class CardController {
     
     fileprivate var _collections = [Card]()
     
+    // nameの文字数18文字くらいが見える限界かも
     func generateCollections() {
         _collections = [
-            Card(cost: "10", name: "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト", image: UIImage(named: "Elephant"), effect: "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト", attack: "10", defense: "10", type: CardType.monster),
+            Card(cost: "10", name: "テストテストテストテストテストテスト", image: UIImage(named: "Elephant"), effect: "テストテストテストテストテスト\nテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト", attack: "10", defense: "10", type: CardType.monster),
             
             Card(cost: "1", name: "test2", image: UIImage(named: "Elephant"), effect: "test2 effect", attack: "1", defense: "3", type: CardType.monster),
             Card(cost: "1", name: "test3", image: UIImage(named: "Elephant"), effect: "test3 effect", attack: "2", defense: "1", type: CardType.monster),

@@ -32,7 +32,7 @@ class CardViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         // itemの間に空白を入れる
-        item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
         
         // groupの設定
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2), heightDimension: .fractionalHeight(1.0))
@@ -71,7 +71,7 @@ class CardViewController: UIViewController {
                             views: views)
         )
         constraints.append(contentsOf: NSLayoutConstraint.constraints(
-                            withVisualFormat: "V:|-20-[cv]-20-[searchBar]-20-|",
+                            withVisualFormat: "V:|-5-[cv]-5-[searchBar]-5-|",
                             options: [],
                             metrics: nil,
                             views: views)
@@ -86,9 +86,9 @@ class CardViewController: UIViewController {
     
     func configureDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<CardCell, CardController.Card> { (cell, indexPath, card) in
-            cell.nameLabel.text = card.name
             cell.costLabel.text = card.cost
             cell.imageView.image = card.image
+            cell.nameLabel.text = card.name
             cell.effectLabel.text = card.effect
             cell.attackLabel.text = card.attack
             cell.defenseLabel.text = card.defense
